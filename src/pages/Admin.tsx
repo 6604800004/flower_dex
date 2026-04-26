@@ -312,7 +312,6 @@ const Admin = () => {
     arr[idx] = value;
     return arr.filter(Boolean).join(", ");
   };
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -944,5 +943,4 @@ const Admin = () => {
     </div>
   );
 };
-
 export default Admin;
