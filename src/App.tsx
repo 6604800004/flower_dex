@@ -17,7 +17,15 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
+      <Sonner
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            bottom: "16px",
+            right: "16px",
+          },
+        }}
+      />
       <BrowserRouter>
         <AuthProvider>
           <Routes>

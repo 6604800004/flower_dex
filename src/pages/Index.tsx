@@ -61,7 +61,8 @@ const Index = () => {
           {translatedQuery && (
             <p className="mt-1.5 ml-1 font-sarabun text-xs text-primary flex items-center gap-1">
               <Sparkles size={12} />
-              ค้นหาด้วย: &quot;{query}&quot; → <strong>{translatedQuery}</strong>
+              ค้นหาด้วย: &quot;{query}&quot; →{" "}
+              <strong>{translatedQuery}</strong>
             </p>
           )}
 
@@ -102,8 +103,8 @@ const Index = () => {
         <hr className="border-border mb-8" />
 
         <p className="font-sarabun text-muted-foreground mb-4">
-          {query ? `ผลการค้นหา "${query}"` : "ดอกไม้ที่นิยม"}{" "}
-          ({results.length} รายการ)
+          {query ? `ผลการค้นหา "${query}"` : "ดอกไม้ที่นิยม"} ({results.length}{" "}
+          รายการ)
         </p>
 
         {isLoading ? (
@@ -112,7 +113,9 @@ const Index = () => {
               size={32}
               className="animate-spin mx-auto text-muted-foreground mb-3"
             />
-            <p className="font-sarabun text-muted-foreground">กำลังโหลดข้อมูล...</p>
+            <p className="font-sarabun text-muted-foreground">
+              กำลังโหลดข้อมูล...
+            </p>
           </div>
         ) : results.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
